@@ -17,6 +17,15 @@ class SplashViewBody extends StatelessWidget {
           width: 100,
           colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
         ),
+        Text(
+          "Read Free Books",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Orbitron',
+          ),
+        ),
       ],
     );
   }
