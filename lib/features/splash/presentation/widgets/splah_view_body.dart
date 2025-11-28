@@ -1,7 +1,11 @@
+import 'package:bookly_app_project/constants.dart';
 import 'package:bookly_app_project/core/utils/assets_data.dart';
+import 'package:bookly_app_project/features/home/presentation/views/home_view.dart';
 import 'package:bookly_app_project/features/splash/presentation/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/utils.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -17,27 +21,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 5),
-    );
-    _slidingAnimation = Tween<Offset>(begin: Offset(0, 20), end: Offset.zero)
-        .animate(
-          CurvedAnimation(
-            parent: _animationController,
-            curve: Curves.fastOutSlowIn,
-          ),
-        );
-    _animationController.forward();
-    _slidingAnimation.addListener(() {
-      setState(() {});
-    });
+    initSlidingAnimation();
+    navigateToHome();
   }
 
   @override
   void dispose() {
-    super.dispose();
     _animationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -61,5 +52,26 @@ class _SplashViewBodyState extends State<SplashViewBody>
         ),
       ],
     );
+  }
+
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.to(HomeView(), transition: Transition.fadeIn, duration: kTransition);
+    });
+  }
+
+  void initSlidingAnimation() {
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 3),
+    );
+    _slidingAnimation = Tween<Offset>(begin: Offset(0, 20), end: Offset.zero)
+        .animate(
+          CurvedAnimation(
+            parent: _animationController,
+            curve: Curves.easeInOut,
+          ),
+        );
+    _animationController.forward();
   }
 }
