@@ -1,9 +1,9 @@
+import 'package:bookly_app_project/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+
 class SlidingText extends StatelessWidget {
-  const SlidingText({
-    super.key,
-    required Animation<Offset> slidingAnimation,
-  }) : _slidingAnimation = slidingAnimation;
+  const SlidingText({super.key, required Animation<Offset> slidingAnimation})
+    : _slidingAnimation = slidingAnimation;
 
   final Animation<Offset> _slidingAnimation;
 
@@ -14,11 +14,7 @@ class SlidingText extends StatelessWidget {
       child: const Text(
         "Read Free Books",
         textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          fontFamily: 'Orbitron',
-        ),
+        style: Styles.textStyle20,
       ),
     );
   }
