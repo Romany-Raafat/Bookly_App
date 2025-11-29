@@ -2,9 +2,7 @@ import 'package:bookly_app_project/features/home/presentation/widgets/custom_lis
 import 'package:flutter/material.dart';
 
 class FeaturedListView extends StatelessWidget {
-  const FeaturedListView({
-    super.key,
-  });
+  const FeaturedListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +15,8 @@ class FeaturedListView extends StatelessWidget {
         itemCount: 20,
         itemBuilder: (context, index) {
           return const Padding(
-            padding: EdgeInsets.only(right: 15 , top: 10 , bottom: 10),
-            child: CustomListViewItem(),
+            padding: EdgeInsets.only(right: 15, top: 10, bottom: 10),
+            child: CustomFeaturedListItem(),
           );
         },
       ),
