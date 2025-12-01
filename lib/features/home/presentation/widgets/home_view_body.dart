@@ -1,3 +1,4 @@
+import 'package:bookly_app_project/core/utils/styles.dart';
 import 'package:bookly_app_project/features/home/presentation/widgets/best_seller_list_view.dart';
 import 'package:bookly_app_project/features/home/presentation/widgets/custom_app_bar.dart';
 import 'package:bookly_app_project/features/home/presentation/widgets/descritpion_widget.dart';
@@ -18,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
             CustomAppBar(),
             FeaturedListView(),
             SizedBox(height: MediaQuery.of(context).size.height * 0.08),
-            Text('Best Seller', style: TextStyle(fontSize: 40)),
+            const Text('Best Seller', style: Styles.textStyle20),
             SizedBox(height: 20),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,

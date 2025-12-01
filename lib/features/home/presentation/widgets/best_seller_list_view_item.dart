@@ -1,4 +1,5 @@
 import 'package:bookly_app_project/core/utils/assets_data.dart';
+import 'package:bookly_app_project/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
@@ -27,23 +28,17 @@ class BestSellerListViewItem extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'The Jungle Book',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
+              const Text('The Jungle Book', style: Styles.textStyle20),
               SizedBox(height: 10),
-              Text(
-                'by Rudyard Kipling',
-                style: TextStyle(fontSize: 25, color: Colors.grey),
-              ),
+              const Text('by Rudyard Kipling', style: Styles.textStyle14),
               SizedBox(height: 20),
               Row(
                 children: [
-                  Icon(Icons.star, color: Colors.amber),
+                  const Icon(Icons.star, color: Colors.amber),
                   SizedBox(width: 5),
-                  Text(r'4.5$', style: TextStyle(fontSize: 25)),
+                  const Text(r'4.5$', style: Styles.textStyle16),
                   SizedBox(width: 20),
-                  Text("(2339)"),
+                  const Text("(2339)", style: Styles.textStyle14),
                 ],
               ),
             ],

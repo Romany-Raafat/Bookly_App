@@ -61,10 +61,13 @@ flutter:
     # "family" key with the font family name, and a "fonts" key with a
     # list giving the asset and other descriptors for the font. For
     # example:
-    # fonts:
-    #   - family: Orbitron-VariableFont_wght
-    #     fonts:
-    #       - asset: assets/fonts/Orbitron-VariableFont_wght.ttf
+  fonts:
+    - family: GT-Sectra-Fine-Black
+      fonts:
+        - asset: assets/fonts/GT-Sectra-Fine-Black.ttf
+    - family: Gilroy-Bold
+      fonts:
+        - asset: assets/fonts/Gilroy-Bold.ttf
     #       - asset: fonts/Schyler-Italic.ttf
     #         style: italic
     # - family: Inconsolata-VariableFont_wdth_wght
