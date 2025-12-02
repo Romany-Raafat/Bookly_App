@@ -1,4 +1,4 @@
-import 'package:bookly_app_project/app_router.dart';
+import 'package:bookly_app_project/core/utils/app_router.dart';
 import 'package:bookly_app_project/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

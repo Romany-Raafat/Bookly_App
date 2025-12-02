@@ -1,6 +1,8 @@
+import 'package:bookly_app_project/core/utils/app_router.dart';
 import 'package:bookly_app_project/core/utils/assets_data.dart';
 import 'package:bookly_app_project/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -9,6 +11,7 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        GoRouter.of(context).push(AppRouter.bookView);
       },
       child: Padding(
         padding: const EdgeInsets.only(top: 35.0, bottom: 20),
