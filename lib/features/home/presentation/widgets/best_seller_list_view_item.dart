@@ -3,6 +3,7 @@ import 'package:bookly_app_project/core/utils/assets_data.dart';
 import 'package:bookly_app_project/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -19,8 +20,8 @@ class BestSellerListViewItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 350,
-              width: 270,
+              height: 320,
+              width: 230,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(AssetsData.imageAsset1),
@@ -48,11 +49,25 @@ class BestSellerListViewItem extends StatelessWidget {
                   SizedBox(height: 20),
                   Row(
                     children: [
-                      const Icon(Icons.star, color: Colors.amber),
                       SizedBox(width: 5),
-                      const Text(r'4.5$', style: Styles.textStyle16),
-                      SizedBox(width: 20),
-                      const Text("(2339)", style: Styles.textStyle14),
+                      Text(
+                        r'4.5$',
+                        style: Styles.textStyle20.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: GoogleFonts.montserrat().fontFamily,
+                        ),
+                      ),
+                      SizedBox(width: 30),
+                      const Icon(Icons.star, color: Colors.amber),
+                      const Text("4.8", style: Styles.textStyle16),
+                      SizedBox(width: 5),
+                      Text(
+                        "(2339)",
+                        style: Styles.textStyle14.copyWith(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
                     ],
                   ),
                 ],

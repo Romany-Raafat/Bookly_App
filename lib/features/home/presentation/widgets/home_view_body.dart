@@ -19,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
             CustomAppBar(),
             FeaturedListView(),
             SizedBox(height: MediaQuery.of(context).size.height * 0.08),
-            const Text('Best Seller', style: Styles.textStyle20),
+            const Text('Best Seller', style: Styles.textStyle18),
             SizedBox(height: 20),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,

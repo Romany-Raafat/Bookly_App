@@ -7,8 +7,7 @@ class FeaturedListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-      },
+      onTap: () {},
       child: Container(
         width: MediaQuery.of(context).size.height * 0.4,
         height: MediaQuery.of(context).size.height * 0.6,
