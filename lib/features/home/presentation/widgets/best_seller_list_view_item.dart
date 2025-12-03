@@ -1,6 +1,7 @@
 import 'package:bookly_app_project/core/utils/app_router.dart';
 import 'package:bookly_app_project/core/utils/assets_data.dart';
 import 'package:bookly_app_project/core/utils/styles.dart';
+import 'package:bookly_app_project/features/home/presentation/widgets/Custom_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,18 +20,7 @@ class BestSellerListViewItem extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 320,
-              width: 230,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(AssetsData.imageAsset1),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.transparent,
-              ),
-            ),
+            CustomImage(imageUrl: AssetsData.imageAsset1),
             SizedBox(width: 35),
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.3,
