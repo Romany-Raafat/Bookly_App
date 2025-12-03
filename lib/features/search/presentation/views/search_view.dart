@@ -8,9 +8,7 @@ class SearchView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      body: SafeArea(
-        child: SearchViewBody(),
-      ),
+      body: SafeArea(child: SearchViewBody()),
     );
   }
 }

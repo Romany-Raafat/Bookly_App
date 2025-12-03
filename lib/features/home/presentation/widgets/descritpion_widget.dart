@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DescritpionWidget extends StatelessWidget {
-  const DescritpionWidget({
-    super.key,
-  });
+  const DescritpionWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,4 +31,3 @@ class DescritpionWidget extends StatelessWidget {
     );
   }
 }
-
