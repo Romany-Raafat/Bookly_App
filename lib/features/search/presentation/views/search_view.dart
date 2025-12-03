@@ -9,10 +9,7 @@ class SearchView extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [SearchViewBody()],
-        ),
+        child: SearchViewBody(),
       ),
     );
   }

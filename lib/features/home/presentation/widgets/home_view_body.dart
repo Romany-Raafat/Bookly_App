@@ -24,7 +24,7 @@ class HomeViewBody extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(child: BestSellerListView()),
+                Expanded(child: BookListViewItem()),
                 SizedBox(width: 20),
                 DescritpionWidget(),
               ],
