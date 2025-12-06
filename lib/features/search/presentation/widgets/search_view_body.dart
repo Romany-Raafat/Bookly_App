@@ -28,7 +28,7 @@ class SearchViewBody extends StatelessWidget {
       },
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: BookListViewItem(physics: BouncingScrollPhysics()),
+        child: BestSellerListView(physics: BouncingScrollPhysics()),
       ),
     );
   }

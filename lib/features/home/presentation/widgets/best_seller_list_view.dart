@@ -1,9 +1,9 @@
 import 'package:bookly_app_project/features/home/presentation/widgets/best_seller_List_view_item.dart';
 import 'package:flutter/material.dart';
 
-class BookListViewItem extends StatelessWidget {
+class BestSellerListView extends StatelessWidget {
   final ScrollPhysics? physics;
-  const BookListViewItem({super.key, this.physics});
+  const BestSellerListView({super.key, this.physics});
 
   @override
   Widget build(BuildContext context) {
