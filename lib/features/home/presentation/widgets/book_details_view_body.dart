@@ -17,7 +17,7 @@ class BookDetailsViewBody extends StatelessWidget {
         child: ListView(
           children: [
             CustomBookDetailsAppBar(),
-            Center(child: FeaturedListItem()),
+            Center(child: FeaturedListItem(imgURL: "",)),
             const SizedBox(height: 23),
             BookDetailsText(),
             const SizedBox(height: 23),

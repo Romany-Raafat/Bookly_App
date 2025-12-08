@@ -18,11 +18,11 @@ class FeaturedListView extends StatelessWidget {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
-              itemCount: 20,
+              itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return const Padding(
+                return  Padding(
                   padding: EdgeInsets.only(right: 15, top: 10, bottom: 10),
-                  child: FeaturedListItem(),
+                  child: FeaturedListItem(imgURL:state.books[index].volumeInfo!.imageLinks!.thumbnail),
                 );
               },
             ),
@@ -36,3 +36,5 @@ class FeaturedListView extends StatelessWidget {
     );
   }
 }
+
+//!
