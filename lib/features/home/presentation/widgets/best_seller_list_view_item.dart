@@ -1,13 +1,15 @@
 import 'package:bookly_app_project/core/utils/app_router.dart';
 import 'package:bookly_app_project/core/utils/assets_data.dart';
 import 'package:bookly_app_project/core/utils/styles.dart';
+import 'package:bookly_app_project/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app_project/features/home/presentation/widgets/Custom_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+  final BookModel bookModel;
+  const BestSellerListViewItem({super.key, required this.bookModel});
 
   @override
   Widget build(BuildContext context) {
@@ -20,28 +22,36 @@ class BestSellerListViewItem extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CustomImage(imageUrl: AssetsData.imageAsset1),
+            CustomImage(
+              imageUrl:
+                  bookModel.volumeInfo!.imageLinks?.thumbnail ??
+                  "https://via.placeholder.com/150",
+            ),
             SizedBox(width: 10),
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.45,
+              height: 200,
               child: Column(
-                mainAxisSize: MainAxisSize.min,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Harry Potter and the Goblet of Fire',
+                  Text(
+                    bookModel.volumeInfo!.title!,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: Styles.textStyle20,
+                    style: Styles.textStyle20.copyWith(fontSize: 22),
                   ),
-                  // SizedBox(height: 10),
-                  const Text('by Rudyard Kipling', style: Styles.textStyle14),
+                  SizedBox(height: 10),
+                  Text(
+                    bookModel.volumeInfo!.authors![0],
+                    style: Styles.textStyle14,
+                  ),
                   SizedBox(height: 20),
                   Row(
                     children: [
                       SizedBox(width: 5),
                       Text(
-                        r'4.5$',
+                        r'Free',
                         style: Styles.textStyle20.copyWith(
                           fontWeight: FontWeight.bold,
                           fontFamily: GoogleFonts.montserrat().fontFamily,

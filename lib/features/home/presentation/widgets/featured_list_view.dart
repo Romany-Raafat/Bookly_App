@@ -20,9 +20,13 @@ class FeaturedListView extends StatelessWidget {
               shrinkWrap: true,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return  Padding(
+                return Padding(
                   padding: EdgeInsets.only(right: 15, top: 10, bottom: 10),
-                  child: FeaturedListItem(imgURL:state.books[index].volumeInfo!.imageLinks!.thumbnail),
+                  child: FeaturedListItem(
+                    imgURL:
+                        state.books[index].volumeInfo!.imageLinks?.thumbnail ??
+                        "https://via.placeholder.com/150", // صورة بديلة
+                  ),
                 );
               },
             ),

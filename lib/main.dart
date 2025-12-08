@@ -22,12 +22,13 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) {
-            return FeaturedBooksCubit(getIt.get<HomeRepoImpl>())..featuredBooks();
+            return FeaturedBooksCubit(getIt.get<HomeRepoImpl>())
+              ..featuredBooks();
           },
         ),
         BlocProvider(
           create: (context) {
-            return NewstBooksCubit(getIt.get<HomeRepoImpl>());
+            return NewstBooksCubit(getIt.get<HomeRepoImpl>())..newstBooks();
           },
         ),
       ],

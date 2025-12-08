@@ -1,5 +1,8 @@
+import 'package:bookly_app_project/core/widgets/custom_error_widget.dart';
+import 'package:bookly_app_project/features/home/presentation/manager/newsest_books/newst_books_cubit.dart';
 import 'package:bookly_app_project/features/home/presentation/widgets/best_seller_List_view_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BestSellerListView extends StatelessWidget {
   final ScrollPhysics? physics;
@@ -7,11 +10,22 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: physics ?? NeverScrollableScrollPhysics(),
-      itemCount: 5,
-      itemBuilder: (context, index) => BestSellerListViewItem(),
+    return BlocBuilder<NewstBooksCubit, NewstBooksState>(
+      builder: (context, state) {
+        if (state is NewstBooksSuccess) {
+          return ListView.builder(
+            shrinkWrap: true,
+            physics: physics ?? NeverScrollableScrollPhysics(),
+            itemCount: state.books.length,
+            itemBuilder: (context, index) =>
+                BestSellerListViewItem(bookModel: state.books[index]),
+          );
+        } else if (state is NewstBooksFailure) {
+          return CustomErrorWidget(errorMsg: state.erroMsg);
+        } else {
+          return Center(child: CircularProgressIndicator());
+        }
+      },
     );
   }
 }

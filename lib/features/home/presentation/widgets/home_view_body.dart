@@ -21,10 +21,10 @@ class HomeViewBody extends StatelessWidget {
               FeaturedListView(),
               // SizedBox(height: MediaQuery.of(context).size.height * 0.08),
               Text(
-                'Best Seller',
+                'Newst Books',
                 style: Styles.textStyle18.copyWith(fontSize: 30),
               ),
-              // SizedBox(height: 10),
+              SizedBox(height: 10),
               BestSellerListView(),
             ],
           ),
