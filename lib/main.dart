@@ -1,5 +1,4 @@
 import 'package:bookly_app_project/constants.dart';
-import 'package:bookly_app_project/core/utils/api_service.dart';
 import 'package:bookly_app_project/core/utils/app_router.dart';
 import 'package:bookly_app_project/core/utils/service_locator.dart';
 import 'package:bookly_app_project/features/home/data/repos/home_repo_impl.dart';
@@ -10,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  configureDependencies();
   runApp(const MyApp());
 }
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) {
-            return FeaturedBooksCubit(getIt.get<HomeRepoImpl>());
+            return FeaturedBooksCubit(getIt.get<HomeRepoImpl>())..featuredBooks();
           },
         ),
         BlocProvider(

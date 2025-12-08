@@ -8,15 +8,15 @@ class FeaturedListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
-      child: Container(
-        width: MediaQuery.of(context).size.height * 0.4,
-        height: MediaQuery.of(context).size.height * 0.6,
-        decoration: BoxDecoration(
-          color: Colors.red,
-          borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
-            image: AssetImage(AssetsData.imageAsset1),
-            fit: BoxFit.cover,
+      child: AspectRatio(
+        aspectRatio: 2.6 / 4, // نفس نسبة كتب أبلكيشن Bookly
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            image: const DecorationImage(
+              image: AssetImage(AssetsData.imageAsset1),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),

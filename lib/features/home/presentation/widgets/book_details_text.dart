@@ -14,7 +14,7 @@ class BookDetailsText extends StatelessWidget {
           style: Styles.textStyle20.copyWith(
             fontWeight: FontWeight.normal,
             fontFamily: GoogleFonts.montserrat().fontFamily,
-            fontSize: 60,
+            fontSize: 30,
           ),
         ),
         const SizedBox(height: 10),

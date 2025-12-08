@@ -6,10 +6,10 @@ class DescritpionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 50.0),
+      padding: const EdgeInsets.only(left: 2.0),
       child: Container(
-        width: 500,
-        height: 400,
+        width: 20,
+        height: 20,
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: Colors.transparent,
@@ -21,7 +21,7 @@ class DescritpionWidget extends StatelessWidget {
           "and enjoy a simple-by-design reading experience.\n\n"
           "Start your journey now! 📚✨",
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 10,
             height: 1.4,
             // color: Colors.w,
           ),

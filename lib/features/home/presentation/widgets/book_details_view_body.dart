@@ -12,17 +12,17 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
       child: SafeArea(
         child: ListView(
           children: [
             CustomBookDetailsAppBar(),
             Center(child: FeaturedListItem()),
-            const SizedBox(height: 43),
+            const SizedBox(height: 23),
             BookDetailsText(),
-            const SizedBox(height: 43),
+            const SizedBox(height: 23),
             BookActions(),
-            const SizedBox(height: 50),
+            const SizedBox(height: 30),
             const Text("You can also like", style: Styles.textStyle14),
             const SizedBox(height: 15),
             SimilarListViewBooks(),

@@ -14,8 +14,8 @@ class CustomAppBar extends StatelessWidget {
       children: [
         SvgPicture.asset(
           AssetsData.logo,
-          height: 40,
-          width: 45,
+          height: 28,
+          width: 28,
           colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
         ),
         IconButton(

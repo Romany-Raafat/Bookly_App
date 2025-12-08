@@ -16,14 +16,14 @@ class BestSellerListViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.bookView);
       },
       child: Padding(
-        padding: const EdgeInsets.only(top: 35.0, bottom: 20),
+        padding: const EdgeInsets.only(bottom: 15),
         child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CustomImage(imageUrl: AssetsData.imageAsset1),
-            SizedBox(width: 35),
+            SizedBox(width: 10),
             SizedBox(
-              width: MediaQuery.of(context).size.width * 0.3,
+              width: MediaQuery.of(context).size.width * 0.45,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +34,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     style: Styles.textStyle20,
                   ),
-                  SizedBox(height: 10),
+                  // SizedBox(height: 10),
                   const Text('by Rudyard Kipling', style: Styles.textStyle14),
                   SizedBox(height: 20),
                   Row(

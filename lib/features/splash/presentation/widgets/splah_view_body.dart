@@ -36,8 +36,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
       children: [
         SvgPicture.asset(
           AssetsData.logo,
-          height: 80,
-          width: 100,
+          height: 35,
+          width: 40,
           colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
         ),
         const SizedBox(height: 15),
